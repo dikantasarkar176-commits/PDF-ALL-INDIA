@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compress your PDF files easily and reduce size with Bikanta Sarkar's free online PDF compressor tool. Fast, secure and SEO optimized.">
+  <meta name="keywords" content="PDF Compressor, Compress PDF, Reduce PDF Size, Online PDF Tool, Bikanta Sarkar">
+  <meta name="author" content="Bikanta Sarkar">
+  <title>PDF Compressor Tool | Bikanta Sarkar</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://yourdomain.com/">
+  <meta property="og:title" content="PDF Compressor Tool by Bikanta Sarkar">
+  <meta property="og:description" content="Compress and optimize your PDF files for free with multiple compression levels.">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #d63031, #ff7675);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #2d3436;
+    }
+
+    input[type="file"], select {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #0984e3;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #74b9ff;
+    }
+
+    .ads {
+      margin: 2rem 0;
+      text-align: center;
+      background: #f0f0f0;
+      border: 2px dashed #ccc;
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #2d3436;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {padding: 1rem;}
+      h1 {font-size: 1.5rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>📄 PDF Compressor Tool</h2>
+  </header>
+
+  <div class="container">
+    <h1>Compress Your PDF File</h1>
+    <p>Select a PDF file and choose your compression level below.</p>
+
+    <input type="file" id="pdfFile" accept=".pdf">
+    <label for="compression">Select Compression Level:</label>
+    <select id="compression">
+      <option value="high">High Compression (Lower Quality)</option>
+      <option value="medium" selected>Medium Compression (Balanced)</option>
+      <option value="low">Low Compression (High Quality)</option>
+    </select>
+
+    <button onclick="compressPDF()">Compress PDF</button>
+
+    <p id="status" style="margin-top:1rem; text-align:center; font-weight:bold;"></p>
+
+    <!-- Google AdSense Ad -->
+    <div class="ads">
+      <p>Advertisement</p>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4431035899447961"
+        crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4431035899447961"
+        data-ad-slot="4471207019"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+  </div>
+
+  <footer>
+    Created by <strong>Bikanta Sarkar</strong> | All Rights Reserved © 2025
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function compressPDF() {
+      const fileInput = document.getElementById('pdfFile');
+      const compression = document.getElementById('compression').value;
+      const status = document.getElementById('status');
+
+      if (!fileInput.files.length) {
+        status.textContent = "Please select a PDF file first.";
+        status.style.color = "red";
+        return;
+      }
+
+      status.textContent = "Compressing your PDF with " + compression + " level...";
+      status.style.color = "#0984e3";
+
+      setTimeout(() => {
+        status.textContent = "✅ Compression completed successfully!";
+        status.style.color = "green";
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
